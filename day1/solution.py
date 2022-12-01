@@ -1,8 +1,7 @@
-def open_problem(file):
-    with open(file,"r") as f:
-        li=f.readlines()
-        li=[i.replace("\n","") for i in li]
-    return li
+import sys
+import os
+sys.path.append(os.path.dirname(os.getcwd()))
+from utility.api import get_input
 
 
 def solution_problem1(li):
@@ -47,7 +46,8 @@ def solution_problem2(li):
 
 
 if __name__=="__main__":
-    input=open_problem("input_problem1.txt")
+    input=get_input(year=2022, day=1)
+    input=input.split("\n")
     k=solution_problem1(input)
     k=solution_problem2(input)
     print(k)
