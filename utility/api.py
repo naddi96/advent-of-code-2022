@@ -3,7 +3,7 @@ from datetime import date
 import os
 
 
-with open("../utility/session_cookie.txt","r")as f:
+with open(f"{os.path.dirname(os.path.abspath(__file__))}/session_cookie.txt","r")as f:
     session=f.read()
 
 def get_input(session_cookie=session

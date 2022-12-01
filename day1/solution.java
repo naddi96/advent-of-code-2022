@@ -12,7 +12,7 @@ class Solution{
         List <Integer> li = new LinkedList<Integer>();
 
         try{
-            File f = new File("input_problem1.txt");
+            File f = new File("input_1_2022.txt");
             
                 myReader = new Scanner(f);
                 while(myReader.hasNextLine()) {
