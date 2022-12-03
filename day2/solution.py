@@ -17,7 +17,6 @@ def part_1(input):
         if mapp[a]==mapp[b]:
             count+=3
             continue
-
         if mapp[a]=="rock" and mapp[b]=="paper":
             count+=6
             continue
