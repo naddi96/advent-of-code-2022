@@ -46,13 +46,15 @@ def part_2(input):
 
 
 
-
-    
+def parse_input(input):
+    #print([input])
+    input=input.split("\n")
+    input=input[:-1]
+    return input
 
 if __name__=="__main__":
     input=get_input(year=2022, day=3 )
-    input=input.split("\n")
-    input=input[0:len(input)-1]
-    part_2(input)
+    input=parse_input(input)
+    part_1(input)
     part_2(input)
     

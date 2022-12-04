@@ -1,3 +1,6 @@
 session_cookie.txt
 __pycache__
 solution_template.py
+.pytest_cache
+day_template
+Advent_of_code_2022.egg-info

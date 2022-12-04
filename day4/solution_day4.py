@@ -1,6 +1,5 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.getcwd()))
 from utility.api import get_input
 
 
@@ -50,10 +49,16 @@ def part_1(input):
     return count
 
 
-if __name__=="__main__":
-    input=get_input(year=2022, day=4 )
+def parse_input(input):
+    #print([input])
     input=input.split("\n")[:-1]
     input=[ [ [int(l) for l in  k.split("-")] for k in i.split(",")] for i in input]
+
+    return input
+
+if __name__=="__main__":
+    input=get_input(year=2022, day=4 )
+    input=parse_input(input)
 
 
     part_1(input)

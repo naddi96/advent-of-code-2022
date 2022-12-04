@@ -1,10 +1,9 @@
-import sys
-import os
-sys.path.append(os.path.dirname(os.getcwd()))
+
+
 from utility.api import get_input
 
 
-def solution_problem1(li):
+def part_1(li):
     maxx=float("-inf")
     current=0
     for el in li:
@@ -16,7 +15,7 @@ def solution_problem1(li):
         maxx=max(current,maxx)
     return maxx
 
-def solution_problem2(li):
+def part_2(li):
     maxx1=float("-inf")
     maxx2=float("-inf")
     maxx3=float("-inf")
@@ -44,10 +43,14 @@ def solution_problem2(li):
          
     return maxx3+maxx1+maxx2
 
+def parse_input(raw_text):
+    #print([raw_text])
+    return raw_text.split("\n")[:-1]
 
 if __name__=="__main__":
     input=get_input(year=2022, day=1)
-    input=input.split("\n")
-    k=solution_problem1(input)
-    k=solution_problem2(input)
+    input=parse_input(input)
+    k=part_1(input)
+    k=part_2(input)
     print(k)
+

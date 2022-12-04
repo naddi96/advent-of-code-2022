@@ -1,6 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.dirname(os.getcwd()))
 from utility.api import get_input
 
 
@@ -26,7 +23,7 @@ def part_1(input):
         if mapp[a]=="sci" and mapp[b]=="rock":
             count+=6
             continue
-
+    print(count)
     return count
 
 def part_2(input):
@@ -45,11 +42,14 @@ def part_2(input):
     print(count)
     return count
         
-    
-
-if __name__=="__main__":
-    input=get_input(year=2022, day=2 )
+def parse_input(input):
     input=input.split("\n")
     input=[k.split(" ") for k in input]
-    input=input[0:len(input)-1]
+    input=input[:-1]
+    
+    return input
+if __name__=="__main__":
+    input=get_input(year=2022, day=2 )
+    input=parse_input(input)
+    part_1(input)
     part_2(input)
