@@ -1,5 +1,4 @@
 
-import pytest 
 import solution_day2 as solution
 
 def test_parse_input():
