@@ -14,12 +14,9 @@ def getvalue(c):
 def part_1(input):
     summ=0
     for el in input:
-
         sett=set()
-        for char in el[0:len(el)//2]:
-            if char not in sett:
-                sett.add(char)
-            
+        for char in el[:len(el)//2]:
+            sett.add(char)
         for char in el[len(el)//2:]:
             if char in sett:
                  summ+=getvalue(char)
