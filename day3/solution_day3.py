@@ -6,7 +6,7 @@ from utility.api import get_input
 
 def getvalue(c):
     if c>="a" and c<="z":
-        return ord(c)-9#6
+        return ord(c)-96
     if c>="A" and c<="Z":
         return ord(c)-38
 
