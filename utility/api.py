@@ -8,6 +8,7 @@ try:
 except:
     with open(f"{os.path.dirname(os.path.abspath(__file__))}/session_cookie.txt","w")as f:
         f.write("put the session cokie here")
+        session=""
     
 
 def get_input(session_cookie=session
