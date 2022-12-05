@@ -31,8 +31,7 @@ def part_2(moves,stacks):
 
 def parse_input(input):
     input=input.split("\n")[:-1]
-    li={}
-
+    stacks={}
     k=0
     for line in input:
         if line[1]=="1":
@@ -42,19 +41,15 @@ def parse_input(input):
         i=1
         count=1
         while i< len(line):
-
             if line[i]!=" ":
-                
-                li[count]=  li.get(count,[])+ [line[i]]
-
+                stacks[count]=  stacks.get(count,[])+ [line[i]]
             count+=1
             i=i+4
-
     moves=[]
     for line in input[k:]:
         l=line.split(" ")
         moves.append( [int(l[1]) , int(l[3]), int(l[5])] )
-    return (moves,li)
+    return (moves,stacks)
     
 if __name__=="__main__":
     input=get_input(year=2022, day=5)
